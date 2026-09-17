@@ -10,3 +10,17 @@ body {
 .navbar .collapsing {
     visibility: visible;
 }
+
+.hero-section {
+    min-height: 620px;
+    display: flex;
+    align-items: center;
+}
+
+.destination-box {
+    transition: transform 0.3s ease;
+}
+
+.destination-box:hover {
+    transform: translateY(-4px);
+}
