@@ -51,7 +51,7 @@
                   Caminatas entre paisajes andinos, lagunas cristalinas y
                   comunidades llenas de historia.
                 </p>
-                <a href="#reservar-montana" class="fw-semibold text-emerald-700"
+                <a href="#reserva" class="fw-semibold text-emerald-700"
                   >Reservar experiencia
                   <span aria-hidden="true">&rarr;</span></a
                 >
@@ -81,7 +81,7 @@
                   Atardeceres sobre el Pacifico, cocina local y dias de descanso
                   junto al mar.
                 </p>
-                <a href="#reservar-costa" class="fw-semibold text-amber-700"
+                <a href="#reserva" class="fw-semibold text-amber-700"
                   >Reservar experiencia
                   <span aria-hidden="true">&rarr;</span></a
                 >
@@ -111,7 +111,7 @@
                   Navega por rios amazonicos y conoce la biodiversidad que hace
                   unico al bosque.
                 </p>
-                <a href="#reservar-selva" class="fw-semibold text-sky-700"
+                <a href="#reserva" class="fw-semibold text-sky-700"
                   >Reservar experiencia
                   <span aria-hidden="true">&rarr;</span></a
                 >
@@ -141,7 +141,7 @@
                   Caminatas entre paisajes andinos, lagunas cristalinas y
                   comunidades llenas de historia.
                 </p>
-                <a href="#reservar-montana" class="fw-semibold text-emerald-700"
+                <a href="#reserva" class="fw-semibold text-emerald-700"
                   >Reservar experiencia
                   <span aria-hidden="true">&rarr;</span></a
                 >
@@ -171,7 +171,7 @@
                   Atardeceres sobre el Pacifico, cocina local y dias de descanso
                   junto al mar.
                 </p>
-                <a href="#reservar-costa" class="fw-semibold text-amber-700"
+                <a href="#reserva" class="fw-semibold text-amber-700"
                   >Reservar experiencia
                   <span aria-hidden="true">&rarr;</span></a
                 >
@@ -201,7 +201,7 @@
                   Navega por rios amazonicos y conoce la biodiversidad que hace
                   unico al bosque.
                 </p>
-                <a href="#reservar-selva" class="fw-semibold text-sky-700"
+                <a href="#reserva" class="fw-semibold text-sky-700"
                   >Reservar experiencia
                   <span aria-hidden="true">&rarr;</span></a
                 >
@@ -210,6 +210,85 @@
           </div>
         </div>
       </section>
+
+      <section id="reserva" class="mt-5 rounded-xl bg-white p-4 shadow-lg md:p-5" aria-labelledby="reserva-title">
+        <div class="mb-4 max-w-2xl">
+          <p class="mb-2 text-sm font-semibold uppercase tracking-widest text-emerald-700">Reserva tu experiencia</p>
+          <h2 id="reserva-title" class="h1 fw-bold">Planifica tu próxima aventura</h2>
+          <p class="mb-0 text-slate-600">Completa tus datos y te contactaremos para confirmar la disponibilidad.</p>
+        </div>
+
+        <form id="reserva-form" class="row g-4" novalidate>
+          <div class="col-md-6">
+            <label for="nombre" class="form-label fw-semibold">Nombre completo</label>
+            <input type="text" class="form-control" id="nombre" name="nombre" autocomplete="name" required aria-describedby="nombre-error">
+            <div id="nombre-error" class="invalid-feedback">Escribe tu nombre completo.</div>
+            <div class="valid-feedback">Nombre registrado correctamente.</div>
+          </div>
+
+          <div class="col-md-6">
+            <label for="correo" class="form-label fw-semibold">Correo electrónico</label>
+            <input type="email" class="form-control" id="correo" name="correo" autocomplete="email" required aria-describedby="correo-error">
+            <div id="correo-error" class="invalid-feedback">Introduce un correo electrónico válido.</div>
+            <div class="valid-feedback">Correo válido.</div>
+          </div>
+
+          <div class="col-md-6">
+            <label for="destino" class="form-label fw-semibold">Destino de interés</label>
+            <select class="form-control" id="destino" name="destino" required aria-describedby="destino-error">
+              <option value="">Selecciona un destino</option>
+              <option value="montana">Montaña viva</option>
+              <option value="costa">Costa dorada</option>
+              <option value="selva">Selva esencial</option>
+            </select>
+            <div id="destino-error" class="invalid-feedback">Selecciona un destino.</div>
+            <div class="valid-feedback">Destino seleccionado.</div>
+          </div>
+
+          <div class="col-md-3">
+            <label for="fecha" class="form-label fw-semibold">Fecha estimada</label>
+            <input type="date" class="form-control" id="fecha" name="fecha" required aria-describedby="fecha-error">
+            <div id="fecha-error" class="invalid-feedback">Selecciona una fecha.</div>
+            <div class="valid-feedback">Fecha disponible para consultar.</div>
+          </div>
+
+          <div class="col-md-3">
+            <label for="personas" class="form-label fw-semibold">Personas</label>
+            <input type="number" class="form-control" id="personas" name="personas" min="1" max="12" value="1" required aria-describedby="personas-error">
+            <div id="personas-error" class="invalid-feedback">Indica entre 1 y 12 personas.</div>
+            <div class="valid-feedback">Cantidad registrada.</div>
+          </div>
+
+          <div class="col-12">
+            <label for="mensaje" class="form-label fw-semibold">Mensaje (opcional)</label>
+            <textarea class="form-control" id="mensaje" name="mensaje" rows="4" aria-describedby="mensaje-ayuda"></textarea>
+            <div id="mensaje-ayuda" class="form-text">Cuéntanos qué tipo de experiencia buscas.</div>
+          </div>
+
+          <div class="col-12">
+            <button type="submit" class="btn btn-success px-4">Solicitar reserva</button>
+            <div id="reserva-exito" class="valid-feedback mt-2" role="status">Solicitud enviada. Revisaremos la disponibilidad y te contactaremos.</div>
+          </div>
+        </form>
+      </section>
     </main>
+    <script>
+      const reservaForm = document.querySelector("#reserva-form");
+
+      reservaForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const campos = reservaForm.querySelectorAll("input, select");
+        let formularioValido = true;
+
+        campos.forEach((campo) => {
+          const campoValido = campo.checkValidity();
+          campo.classList.toggle("is-invalid", !campoValido);
+          campo.classList.toggle("is-valid", campoValido);
+          if (!campoValido) formularioValido = false;
+        });
+
+        document.querySelector("#reserva-exito").classList.toggle("d-block", formularioValido);
+      });
+    </script>
   </body>
 </html>
