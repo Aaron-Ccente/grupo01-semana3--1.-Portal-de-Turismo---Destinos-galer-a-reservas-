@@ -40,8 +40,117 @@
 </head>
 
 <body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-opacity-75 shadow-lg py-3 backdrop-blur">
+        <div class="container">
+
+            <a class="navbar-brand fw-bold" href="#">
+                Portal de Turismo
+            </a>
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#menuPrincipal"
+                aria-controls="menuPrincipal"
+                aria-expanded="false"
+                aria-label="Abrir menú de navegación">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menuPrincipal">
+
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                    <li class="nav-item">
+                        <a
+                            class="nav-link active"
+                            aria-current="page"
+                            href="#">
+                            Inicio
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            Destinos
+                        </a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a
+                            class="nav-link dropdown-toggle"
+                            href="#"
+                            role="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Explorar
+                        </a>
+
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    Playas
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    Montañas
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    Ciudades
+                                </a>
+                            </li>
+
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    Lugares históricos
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            Galería
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            Reservas
+                        </a>
+                    </li>
+
+                </ul>
+
+                <div class="d-flex align-items-center">
+                    <a
+                        class="nav-link text-white position-relative"
+                        href="#">
+                        Notificaciones
+                        <span class="badge rounded-pill bg-danger">
+                            3
+                        </span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+
     <main class="container py-5">
         <div class="text-center">
+
             <h1 class="display-5 fw-bold">
                 Portal de Turismo
             </h1>
@@ -54,10 +163,8 @@
                 Descubre los principales destinos turísticos del Perú.
             </p>
 
-            <p>
-                Explora lugares, conoce nuevas experiencias y planifica tus próximas reservas.
-            </p>
         </div>
     </main>
+
 </body>
 </html>
